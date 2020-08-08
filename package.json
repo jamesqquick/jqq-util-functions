@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jamesqquick/jqq-util-functions/issues"
   },
-  "homepage": "https://github.com/jamesqquick/jqq-util-functions#readme"
+  "homepage": "https://github.com/jamesqquick/jqq-util-functions#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }
