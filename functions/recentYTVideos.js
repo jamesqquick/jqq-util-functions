@@ -7,6 +7,10 @@ exports.handler = async (event) => {
         const minifiedData = data.items.map((item) => item.snippet);
         return {
             statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify(minifiedData),
         };
     } catch (err) {
