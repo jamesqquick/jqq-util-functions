@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/jamesqquick/jqq-util-functions#readme",
   "dependencies": {
+    "cloudinary": "^1.22.0",
+    "dotenv": "^8.2.0",
+    "netlify-functions-simple-return": "^1.0.0",
     "node-fetch": "^2.6.0"
   }
 }
