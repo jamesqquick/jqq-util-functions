@@ -19,7 +19,7 @@ const generateLearningQuickCoverURL = (
                 },
                 color: '#ffffff',
                 effect: 'colorize',
-                y: '-100',
+                y: '-150',
             },
             {
                 overlay: {
@@ -61,17 +61,17 @@ const generateLearningQuickCoverURL = (
             },
             {
                 overlay: 'learning_quick:me.png',
-                height: '240',
-                width: '240',
+                height: '300',
+                width: '300',
                 y: '150',
-                x: '-500',
+                x: '-525',
                 radius: 'max',
                 border: '6px_solid_rgb:c7d0d9',
             },
             {
                 overlay: `learning_quick:${guestImage}`,
-                height: '300',
-                width: '300',
+                height: '360',
+                width: '360',
                 y: '150',
                 x: '-260',
                 radius: 'max',
