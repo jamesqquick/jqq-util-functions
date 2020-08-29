@@ -4,10 +4,8 @@ exports.handler = async (event) => {
 
     try {
         const url = `https://www.googleapis.com/youtube/v3/search?key=${process.env.GOOGLE_API_KEY}&channelId=${process.env.YOUTUBE_CHANNEL_ID}&part=snippet,id&order=date&maxResults=${count}`;
-        console.log(url);
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data);
         const minifiedData = data.items.map((item) => ({
             ...item.snippet,
             videoId: item.id.videoId,
