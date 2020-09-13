@@ -2,8 +2,6 @@ const { generateLearningQuickCoverURL } = require('./utils/StreamUtils');
 const simpleReturn = require('netlify-functions-simple-return');
 
 exports.handler = async (event) => {
-    const body = JSON.parse(event.body);
-    const { title, guest, guestTitle, guestImage, time } = body;
     const headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type',
@@ -18,6 +16,9 @@ exports.handler = async (event) => {
             body: 'This was not a POST request!',
         };
     }
+    const body = JSON.parse(event.body);
+    const { title, guest, guestTitle, guestImage, time } = body;
+
     const url = generateLearningQuickCoverURL(
         title,
         guest,
