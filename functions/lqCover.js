@@ -10,6 +10,7 @@ exports.handler = async (event) => {
 
     if (event.httpMethod !== 'POST') {
         // To enable CORS
+        console.log('preflight');
         return {
             statusCode: 200, // <-- Important!
             headers,
@@ -26,5 +27,5 @@ exports.handler = async (event) => {
         guestImage,
         time
     );
-    return simpleReturn(200, { url });
+    return { statusCode: 200, body: JSON.stringify({ url }), headers };
 };
