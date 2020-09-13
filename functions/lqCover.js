@@ -3,7 +3,7 @@ const simpleReturn = require('netlify-functions-simple-return');
 
 exports.handler = async (event) => {
     const headers = {
-        'access-control-allow-origin': 'http://localhost:3333',
+        'access-control-allow-origin': '*',
         'access-control-allow-headers': '*',
         'access-control-allow-methods': 'GET, POST, PUT, DELETE',
     };
