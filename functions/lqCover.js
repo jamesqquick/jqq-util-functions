@@ -3,9 +3,9 @@ const simpleReturn = require('netlify-functions-simple-return');
 
 exports.handler = async (event) => {
     const headers = {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+        'access-control-allow-origin': '*',
+        'access-control-allow-headers': '*',
+        'access-control-allow-methods': 'GET, POST, PUT, DELETE',
     };
 
     if (event.httpMethod !== 'POST') {
