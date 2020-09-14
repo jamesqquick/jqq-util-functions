@@ -1,6 +1,5 @@
 require('dotenv').config();
 const { cloudinary } = require('./cloudinary');
-
 const generateLearningQuickCoverURL = (
     title,
     guest,
