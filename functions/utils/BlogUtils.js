@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { cloudinary } = require('./cloudinary');
 const generateBlogPostCover = (title) => {
-    const url = cloudinary.url('learning_quick/lq-bg', {
+    const url = cloudinary.url('learning_quick/blog_cover', {
         transformation: [
             {
                 overlay: {
@@ -10,9 +10,21 @@ const generateBlogPostCover = (title) => {
                     font_weight: 'bold',
                     text: title,
                 },
-                color: '#ffffff',
+                color: '#333',
                 effect: 'colorize',
-                y: '-150',
+                y: '0',
+                width: '1000',
+            },
+            {
+                overlay: {
+                    font_family: 'Poppins',
+                    font_size: 42,
+                    text: '@jamesqquick',
+                },
+                color: '#555',
+                effect: 'colorize',
+                y: '300',
+                x: '400',
             },
         ],
     });

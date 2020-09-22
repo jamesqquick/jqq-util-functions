@@ -21,6 +21,7 @@ exports.handler = async (event) => {
 
     try {
         const url = generateBlogPostCover(title);
+        console.log(url);
         const res = await fetch(url);
 
         const imageAsset = await sanityClient.assets.upload('image', res.body, {
@@ -39,7 +40,6 @@ exports.handler = async (event) => {
                 },
             })
             .commit();
-        console.log(updatedRecord.coverImage);
 
         return { statusCode: 200, body: JSON.stringify({ url }), headers };
     } catch (error) {

@@ -2,7 +2,7 @@ require('dotenv').config();
 const { cloudinary } = require('./cloudinary');
 const generateLearningQuickCoverURL = (
     title,
-    guest,
+    guestName,
     guestTitle,
     guestImage,
     time
@@ -24,7 +24,7 @@ const generateLearningQuickCoverURL = (
                 overlay: {
                     font_family: 'Poppins',
                     font_size: 70,
-                    text: guest,
+                    text: guestName,
                 },
                 color: '#ffffff',
                 effect: 'colorize',
