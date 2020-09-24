@@ -36,14 +36,13 @@ const generateLearningQuickCoverURL = (
             {
                 overlay: {
                     font_family: 'Poppins',
-                    font_size: 60,
+                    font_size: 54,
                     text: guestTitle,
                 },
                 color: '#ffffff',
                 effect: 'colorize',
-                y: '325',
+                y: '300',
                 x: '1000',
-                width: '600',
                 gravity: 'south_west',
             },
             {
@@ -75,6 +74,7 @@ const generateLearningQuickCoverURL = (
                 x: '-260',
                 radius: 'max',
                 border: '10px_solid_rgb:de5254',
+                crop: 'fill',
             },
         ],
     });
